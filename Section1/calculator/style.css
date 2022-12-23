@@ -61,7 +61,7 @@ body {
   gap: 16px;
 }
 
-#wrap #calc #calcBtn_sec #calcBtn {
+#calcBtn_sec #calcBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +70,7 @@ body {
   height: 13%;
 }
 
-#wrap #calc #calcBtn_sec #calcBtn .number {
+#calcBtn_sec #calcBtn .number {
   width: 62px;
   height: 100%;
   border-radius: 8px;
@@ -94,6 +94,6 @@ body {
 #calcBtn_sec #calcBtn .lightGray {
   background-color: #d0cece;
 }
-#wrap #calc #calcBtn_sec #calcBtn .double {
+#calcBtn_sec #calcBtn .double {
   width: 132px;
 }
