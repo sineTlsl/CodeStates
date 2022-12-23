@@ -47,7 +47,7 @@ body {
   text-shadow: 2px 5px 5px #856e6e;
 }
 
-#calBtn_sec {
+#calcBtn_sec {
   background-color: #fff;
   height: 320px;
   width: 90%;
@@ -61,7 +61,7 @@ body {
   gap: 16px;
 }
 
-#wrap #calc #calBtn_sec #calBtn {
+#wrap #calc #calcBtn_sec #calcBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +70,7 @@ body {
   height: 13%;
 }
 
-#wrap #calc #calBtn_sec #calBtn .number {
+#wrap #calc #calcBtn_sec #calcBtn .number {
   width: 62px;
   height: 100%;
   border-radius: 8px;
@@ -81,19 +81,19 @@ body {
   box-shadow: 2px 5px 5px #d0cece;
 }
 
-#calBtn_sec #calBtn .grey {
+#calcBtn_sec #calcBtn .grey {
   background-color: #757171;
   color: #fff;
 }
 
-#calBtn_sec #calBtn .red {
+#calcBtn_sec #calcBtn .red {
   background-color: #9d5645;
   color: #fff;
 }
 
-#calBtn_sec #calBtn .lightGray {
+#calcBtn_sec #calcBtn .lightGray {
   background-color: #d0cece;
 }
-#wrap #calc #calBtn_sec #calBtn .double {
+#wrap #calc #calcBtn_sec #calcBtn .double {
   width: 132px;
 }
