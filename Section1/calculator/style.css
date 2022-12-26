@@ -6,6 +6,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Rubik', sans-serif;
 }
 
 #wrap {
@@ -15,17 +16,17 @@ body {
   min-height: 100vh;
 }
 
-#calc {
+#calculator {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  width: 350px;
-  height: 500px;
+  width: 360px;
+  height: 520px;
   border-radius: 10px;
 
-  background-color: #475368;
+  background-color: #353335;
   box-shadow: 10px 5px 5px #d0cece;
 }
 
@@ -33,17 +34,20 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  background-color: #f6c5b6;
+  background-color: #eabcb8;
   height: 120px;
   width: 90%;
-  padding-right: 20px;
+  padding: 0 20px 10px 0;
   border-radius: 10px 10px 0 0;
 }
 
-#result .result_text {
-  display: flex;
-  font-size: 60px;
-  font-weight: bold;
+#result_text {
+  background-color: #eabcb8;
+  border: 0;
+  width: 90%;
+  font-size: 50px;
+  text-align: right;
+  font-weight: 500;
   text-shadow: 2px 5px 5px #856e6e;
 }
 
@@ -61,7 +65,7 @@ body {
   gap: 16px;
 }
 
-#calcBtn_sec #calcBtn {
+#calcBtn_sec .calcBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,30 +74,48 @@ body {
   height: 13%;
 }
 
-#calcBtn_sec #calcBtn .number {
+#calcBtn_sec .calcBtn .clear, .number, .operator, .calculate{
   width: 62px;
   height: 100%;
   border-radius: 8px;
   border: none;
 
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   box-shadow: 2px 5px 5px #d0cece;
 }
 
-#calcBtn_sec #calcBtn .grey {
-  background-color: #757171;
-  color: #fff;
-}
 
-#calcBtn_sec #calcBtn .red {
+#calcBtn_sec .calcBtn .operator {
   background-color: #9d5645;
   color: #fff;
 }
 
-#calcBtn_sec #calcBtn .lightGray {
+#calcBtn_sec .calcBtn .clear {
+  background-color: #757171;
+  color: #fff;
+}
+
+#calcBtn_sec .calcBtn .number{
   background-color: #d0cece;
 }
-#calcBtn_sec #calcBtn .double {
+
+#calcBtn_sec .calcBtn .calculate{
+  background-color: #9d5645;
+  color: #fff;
+}
+
+#calcBtn_sec > .calcBtn > .operator:hover,
+#calcBtn_sec > .calcBtn > .number:hover,
+#calcBtn_sec > .calcBtn > .calculate:hover,
+#calcBtn_sec > .calcBtn > .clear:hover
+{
+  cursor: pointer;
+  background-color : #212121;
+  color: #fff;
+
+}
+
+#calcBtn_sec .calcBtn .double {
   width: 132px;
 }
