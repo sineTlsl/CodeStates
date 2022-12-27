@@ -9,8 +9,7 @@
     <!-- font 설정 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
     <title>Calculator</title>
   </head>
   <body>
@@ -44,12 +43,18 @@
         </div>
         <div class="calcBtn">
           <button class="number double">0</button>
-          <button class="number">.</button>
+          <button class="decimal">.</button>
           <button class="calculate">=</button>
         </div>
       </div>
+      <div class="png_sec">
+        <span>We</span>
+        <img src="./webare.png">
+        <span>Bare</span>
+      </div>
     </div>
-    <script>
+    <script src="./script.js"></script>
+    <!-- <script>
       const display = document.querySelector('#result_text');
       const btn = document.getElementById('calcBtn_sec');
       
@@ -72,12 +77,10 @@
           result = Number(num1) % Number(num2);
         }
 
+        result = result.toString();
+
         // 계산 결과의 값이 현재 계산기 크기보다 커지지 않도록 글자수 조정
-        if (Number.isInteger(result)) {
-          return result.toString();
-        } else {
-          return result.length > 7 ? result.toPrecision(8) : result.toString();
-        }
+        return result.length > 7 ? Number(result).toPrecision(8) : result;
       }
 
       // 버튼 눌리면 이벤트리스너 실행
@@ -114,7 +117,7 @@
           num2 = '';
           op = '';
         }
-      });
-    </script>
+      }); 
+    </script> -->
   </body>
 </html>
