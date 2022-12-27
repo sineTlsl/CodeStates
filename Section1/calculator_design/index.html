@@ -9,8 +9,7 @@
     <!-- font 설정 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
     <title>Calculator</title>
   </head>
   <body>
@@ -44,77 +43,16 @@
         </div>
         <div class="calcBtn">
           <button class="number double">0</button>
-          <button class="number">.</button>
+          <button class="decimal">.</button>
           <button class="calculate">=</button>
         </div>
       </div>
+      <div class="png_sec">
+        <span>We</span>
+        <img src="./webare.png">
+        <span>Bare</span>
+      </div>
     </div>
-    <script>
-      const display = document.querySelector('#result_text');
-      const btn = document.getElementById('calcBtn_sec');
-      
-      let num1 = '';
-      let num2 = '';
-      let op = '';
-
-      // 연산하는 함수
-      function calculateWork(num1, op, num2) {
-        let result = 0;
-        if (op === '+') {
-          result = Number(num1) + Number(num2);
-        } else if (op === "-") {
-          result = Number(num1) - Number(num2);
-        } else if (op === "x") {
-          result = Number(num1) * Number(num2);
-        } else if (op === "/") {
-          result = Number(num1) / Number(num2);
-        } else if (op === "%") {
-          result = Number(num1) % Number(num2);
-        }
-
-        // 계산 결과의 값이 현재 계산기 크기보다 커지지 않도록 글자수 조정
-        if (Number.isInteger(result)) {
-          return result.toString();
-        } else {
-          return result.length > 7 ? result.toPrecision(8) : result.toString();
-        }
-      }
-
-      // 버튼 눌리면 이벤트리스너 실행
-      btn.addEventListener('click', function(e) {
-        const target = e.target;
-        // 계산을 하기 위해선 2개의 값을 받았는 지 확인하고 값 넣어주기
-        if (target.className.split(' ')[0]  === 'number') {
-          if (op === '') {
-            num1 += target.textContent;
-            display.textContent = num1; 
-          } else {
-            num2 += target.textContent;
-            display.textContent = num2; 
-            console.log("num2: " + num2);
-          }
-        }
-        
-        // 연산기호 저장
-        if (target.className === 'operator') {
-          op = target.textContent;
-        }
-
-        // 데이터 지우기
-        if(target.className.split(' ')[0] === 'clear') {
-          display.textContent = '0';
-          num1 = '';
-          num2 = '';
-        }
-
-        // 계산 및 Display
-        if(target.className === 'calculate') {
-          display.textContent = calculateWork(num1, op, num2);
-          num1 = display.textContent;
-          num2 = '';
-          op = '';
-        }
-      });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>

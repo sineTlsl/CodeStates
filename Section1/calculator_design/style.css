@@ -6,7 +6,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Yeon Sung', cursive;
 }
 
 body {
@@ -14,7 +14,11 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #212121; 
+  background-color: #e0e0e0; 
+}
+
+img {
+  width: 35%;
 }
 
 #wrap {
@@ -25,13 +29,68 @@ body {
 
   max-width: 400px;
   width: 100%;
-  max-height: 650px;
+  max-height: 690px;
   height: 100vh;
 
-  border-radius: 40px;
-  background-color: lightcoral;
-  box-shadow: 0 0.4rem #dfd9d9;
+  border-radius: 30px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 15px #bebebe, -15px -15px 15px #bebebe;
+}
 
+#result {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-color: #eabcb8;
+  height: 17%;
+  width: 90%;
+  padding: 0 20px 10px 0;
+  border-radius: 10px 10px 0 0;
+  margin-top: 10%;
+}
+
+#result_text {
+  border: 0;
+  width: 90%;
+  font-size: 50px;
+  text-align: right;
+  font-weight: 500;
+  text-shadow: 2px 5px 5px rgb(172, 109, 109);
+}
+
+#calcBtn_sec {
+  background-color: #fff;
+  height: 55%;
+  width: 90%;
+  border-radius: 0 0 10px 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 0 0.5rem;
+  overflow: hidden auto;
+}
+
+#calcBtn_sec .calcBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem;
+  height: 10%;
+}
+
+
+#calcBtn_sec .calcBtn .double {
+  width: 24rem;
+}
+
+#calcBtn_sec .calcBtn .clear, .number, .operator, .decimal, .calculate{
+  font-size: 17px;
+  margin: 0.2rem;
+  font-weight: 900;
 }
 
 button {
@@ -39,14 +98,16 @@ button {
   border: none;
   padding: 1rem;
   font-size: 1rem;
-  width: 10em;
+  width: 10rem;
   border-radius: 1rem;
   color: lightcoral;
   box-shadow: 0 0.4rem #dfd9d9;
   cursor: pointer;
+  font-family: 'Yeon Sung', cursive;
 }
 
-button:active {
+
+button:hover {
   color: white;
   box-shadow: 0 0.2rem #dfd9d9;
   transform: translateY(0.2rem);
@@ -61,4 +122,11 @@ button:hover:not(:disabled) {
 button:disabled {
   cursor: auto;
   color: grey;
+}
+
+.png_sec {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 5%;
 }
