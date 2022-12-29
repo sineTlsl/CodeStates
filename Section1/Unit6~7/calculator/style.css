@@ -87,7 +87,7 @@ img {
   width: 24rem;
 }
 
-#calcBtn_sec .calcBtn .clear, .number, .operator, .decimal, .calculate{
+#calcBtn_sec .calcBtn .clear, .number, .operator, .decimal, .calculate {
   font-size: 17px;
   margin: 0.2rem;
   font-weight: 900;
