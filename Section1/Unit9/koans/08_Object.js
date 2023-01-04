@@ -142,7 +142,7 @@ describe('Object에 대해서 학습합니다.', function () {
     expect(copiedObj.henchwoman).to.equal('Adam West');
 
     delete obj.twins['Jared Leto'];
-    expect('Jared Leto' in copiedObj.twins).to.equal(FILL_ME_IN);
+    expect('Jared Leto' in copiedObj.twins).to.equal(false);
 
     /*
     마지막 테스트 코드의 결과가 예상과는 달랐을 수도 있습니다.
