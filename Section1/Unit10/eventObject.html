@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>이벤트 객체</title>
+  </head>
+  <body>
+    <button>아메리카노</button>
+    <button>카페라떼</button>
+    <script>
+      let menus = document.querySelectorAll("button"); //모든 버튼을 가져옵니다.
+
+      let btnAmericano = menus[0];
+      let btnCaffelatte = menus[1];
+
+      function handleClick(event) {
+        let currentMenu = event.target.textContent; // TODO
+        console.log(currentMenu + "를 클릭하셨습니다.");
+      }
+
+      btnAmericano.onclick = handleClick;
+      btnCaffelatte.onclick = handleClick; // 이상으로 for 문으로 충분히 구현할 수 있는 내용입니다.
+    </script>
+  </body>
+</html>
