@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>유효성 검사</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <!-- font 설정 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,29 +19,38 @@
       <h1 class="title-header">Welcom</h1>
     </header>
     <main id="main">
-      <section id="joinUp_sec">
+      <section id="signup_sec">
         <fieldset class="fieldset">
           <div class="fieldset-title">email</div>
-          <input type="text" placeholder="이메일을 입력하세요" />
+          <input type="text" id="email" autocomplete="off" placeholder="이메일을 입력하세요" />
+          <div class="email-failed message hide">이메일 형식이 올바르지 않습니다.</div>
         </fieldset>
         <fieldset class="fieldset">
           <div class="fieldset-title">password</div>
-          <input type ="text" placeholder="비밀번호를 입력하세요" />
+          <input type ="password" id="password" autocomplete="off" placeholder="비밀번호를 입력하세요" />
+          <div class="password-message message hide">알파벳/숫자/특수문자 각 1개 이상 조합 (8~20자)</div>
         </fieldset>
         <fieldset class="fieldset">
           <div class="fieldset-title">password confirm</div>
-          <input type ="text" placeholder="비밀번호를 한번 더 입력하세요" />
+          <input type ="password" id="password-retype" autocomplete="off" placeholder="비밀번호를 한번 더 입력하세요" />
+          <div class="password-remessage message hide">비밀번호가 일치하지 않습니다.</div>
         </fieldset>
         <fieldset class="fieldset">
           <div class="fieldset-title">name</div>
-          <input type ="text" placeholder="실명을 입력하세요" />
+          <input type ="text" id="name" autocomplete="off" placeholder="실명을 입력하세요" />
+          <div class="name-message message hide">올바른 이름을 입력해주세요.</div>
         </fieldset>
         <fieldset class="fieldset">
           <div class="fieldset-title">Date of birth</div>
-          <input type ="text" placeholder="생년월일 6자리를 입력하세요" />
+          <input type ="text" id="date" autocomplete="off" placeholder="생년월일 6자리를 입력하세요 (990101)" />
+          <div class="date-message message hide">올바른 생년월일 형식이 아닙니다.</div>
+        </fieldset>
+        <fieldset class="sign">
+          <button>Join</button>
         </fieldset>
       </section>
     </main>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
