@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  min-height: 100vh;
+}
+
+.dataBtn {
+  margin-top: 15px;
+  width: 100px;
+  height: 40px;
+}
+
+.box {
+  margin: 15px 0;
+}
