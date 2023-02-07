@@ -6,5 +6,5 @@ function computeSquareRoot(num) {
   for (let i = 0; i < 15; i++) {
     babylonian = (babylonian + num / babylonian) / 2;
   }
-  return +babylonian.toFixed(2);
+  return Number(babylonian.toFixed(2));
 }
