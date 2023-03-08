@@ -9,7 +9,7 @@
 - 쿠키를 이용하는 것은 단순히 서버에서 클라이언트에 쿠키를 전송하는 것만 의미하지 않고 클라이언트에서 서버로 쿠키를 다시 전송하는 것도 포함된다.
 - 해당 도메인에 대해 쿠키가 존재하면, 웹 브라우저는 도메인에게 http 요청 시 쿠키를 함께 전달한다.
 
-> #### 쿠키를 이용한 상태 유지
+> **쿠키를 이용한 상태 유지**
 >
 > - 서버는 클라이언트에 인증정보를 담은 쿠키를 전송하고, 클라이언트는 전달받은 쿠키를 서버에 요청과 함께 전송하여 Stateless한 인터넷 연결을 Stateful하게 유지할 수 있다.
 >
@@ -25,7 +25,7 @@
 
 ## Cookie Options
 
-> #### 서버가 클라이언트에 특정한 데이터를 저장할 수 있다.
+> **서버가 클라이언트에 특정한 데이터를 저장할 수 있다.**
 >
 > 서버는 쿠키를 이용하여 데이터를 저장하고 그 데이터를 불러와서 사용할 수 있지만, 데이터를 저장한 이후 아무 때나 데이터를 가져올 수는 없다.
 >
@@ -102,7 +102,6 @@ Path가 `/users` 로 설정되어 있고, 요청하는 세부 경로가 `/users/
 
 <br>
 
-> #### Reference
+> **Reference**
 >
-> [CODESTATES (SEB_FE_43)](https://www.codestates.com/)
-> [MDN - Set-Cookie Attributes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
+> [CODESTATES (SEB_FE_43)](https://www.codestates.com/) > [MDN - Set-Cookie Attributes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
