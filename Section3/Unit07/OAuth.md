@@ -64,14 +64,14 @@ OAuth 인증 방식에는 여러 가지가 있지만, 그 중 Implicit Grant Typ
 
 1. 사용자가 Application에 접속한다.
 2. Application에서 Authorization Server로 인증 요청을 보낸다.
-   **3. Authorization Server는 유효한 인증 요청인지 확인한 후 Authorization Code를 발급한다.**
-   **4. Authorization Server에서 Application으로 Authorization Code를 전달한다.**
-   **5. Application이 Authorization Code로 발급받은 Authorization Code를 전달한다.**
-3. Authorization Server는 유효한 인증 요청인지 확인한 후 액세스 토큰을 발급한다.
-4. Authorization Server에서 Application으로 액세스 토큰을 전달한다.
-5. Application은 발급받은 액세스 토큰을 담아 Resource Server로 사용자의 정보를 요청한다.
-6. Resource Server는 Application에게서 전달 받은 액세스 토큰이 유효한 토큰인지 확인한다.
-7. 유효한 토큰이라면, Application이 요청한 사용자의 정보를 전달한다.
+3. **Authorization Server는 유효한 인증 요청인지 확인한 후 Authorization Code를 발급한다.**
+4. **Authorization Server에서 Application으로 Authorization Code를 전달한다.**
+5. **Application이 Authorization Code로 발급받은 Authorization Code를 전달한다.**
+6. Authorization Server는 유효한 인증 요청인지 확인한 후 액세스 토큰을 발급한다.
+7. Authorization Server에서 Application으로 액세스 토큰을 전달한다.
+8. Application은 발급받은 액세스 토큰을 담아 Resource Server로 사용자의 정보를 요청한다.
+9. Resource Server는 Application에게서 전달 받은 액세스 토큰이 유효한 토큰인지 확인한다.
+10. 유효한 토큰이라면, Application이 요청한 사용자의 정보를 전달한다.
 
 Implicit Grant Type과 비교해보면, **Authorization Code를 사용한 인증 단계가 추가로 있기 때문에 비교적 더 안전하다.**
 
@@ -79,7 +79,7 @@ Implicit Grant Type과 비교해보면, **Authorization Code를 사용한 인증
 
 ![Server에서만 관리](https://velog.velcdn.com/images/tlsl13/post/50126455-3773-4a84-be00-0551fedafd89/image.png)
 
-하지만, 사용자가 새로운 서비스를 이용하다가 액세스 토큰이 만료되었을 떼, 매번 이 과정을 거쳐서 액세스 토큰을 발급받아야 한다면 사용자 편의성에 있어서는 좋지 않다.
+하지만, 사용자가 새로운 서비스를 이용하다가 액세스 토큰이 만료되었을 때, 매번 이 과정을 거쳐서 액세스 토큰을 발급받아야 한다면 사용자 편의성에 있어서는 좋지 않다.
 
 그렇기 때문에 액세스 토큰을 발급해줄 때 리프레시 토큰을 같이 발급해주기도 한다. 이때 **리프레시 토큰을 사용해서 액세스 토큰을 받아오는 인증 방식을 Refresh Token Grant Type**이라고 한다.
 
@@ -110,7 +110,7 @@ Refresh Token Grant Type은 간단하다.
 - OAuth 인증을 허가한다고 해서 새로운 서비스가 사용중이던 서비스의 모든 정보에 접근이 가능한 것은 아니다. 사용자가 원하는 정보에만 접근을 허락할 수 있어 보다 더 안전하다.
 - OAuth 설정 페이지에서는 Application에서 필요한 정보를 선택할 수 있다. 사용자는 이 중 원하는 정보만 선택적으로 제공할 수 있다.
 
-<br>
+<br><br>
 
 > **Reference**
 >
